@@ -1,0 +1,16 @@
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; }
+.calendar-container { width: 90%; max-width: 1200px; display: flex; flex-direction: column; align-items: center; }
+.month { width: 100%; text-align: center; font-size: 1.5em; margin: 20px 0; }
+.weekdays, .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; width: 100%; }
+.weekdays { font-weight: bold; text-align: center; margin-bottom: 5px; }
+.day { border: 1px solid #ddd; padding: 10px; text-align: center; cursor: pointer; min-height: 80px; display: flex; align-items: center; justify-content: center; }
+.todo-modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+.todo-modal.show { display: block; }
+.todo-list { list-style: none; padding: 0; }
+.todo-list li { display: flex; justify-content: space-between; margin-top: 5px; }
+.close-btn { margin-top: 10px; cursor: pointer; }
+@media (max-width: 600px) {
+    .day { min-height: 60px; padding: 5px; }
+}
